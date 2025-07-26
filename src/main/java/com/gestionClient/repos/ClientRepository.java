@@ -9,4 +9,5 @@ public interface ClientRepository extends JpaRepository<Client, Long> {
    List<Client> findByVille (String ville);
 
    List<Client> findByNom (String ville);
+   long countByVille (String ville);
 }

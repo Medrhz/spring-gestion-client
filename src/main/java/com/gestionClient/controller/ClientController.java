@@ -55,10 +55,9 @@ public class ClientController {
    }
 
 
-   // get client
-   @GetMapping("/ville/{ville}")
-   public ResponseEntity<List<Client>> getClientsByVille (@PathVariable String ville) {
-      List<Client> clients = this.clientService.getClientsByVille(ville);
+   @GetMapping("/ville/count/{ville}")
+   public ResponseEntity<Long> getClientsByVille(@PathVariable String ville) {
+      Long clients = clientService.getNumberOfClientByVille(ville);
       return ResponseEntity.ok(clients);
    }
 
